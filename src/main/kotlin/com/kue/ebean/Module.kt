@@ -1,6 +1,5 @@
 package com.kue.ebean
 
-import com.avaje.ebean.EbeanServer
 import com.google.inject.AbstractModule
 
 /**
@@ -9,7 +8,9 @@ import com.google.inject.AbstractModule
 class Module : AbstractModule() {
 
     override fun configure() {
-        bind(EbeanServer::class.java).toProvider(EbeanServerProvider::class.java).asEagerSingleton()
+        bind(EbeanServerCollection::class.java)
+                .toProvider(EbeanServerProvider::class.java)
+                .asEagerSingleton()
     }
 
 }
