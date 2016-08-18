@@ -16,7 +16,7 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
 
 group 'com.kue'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -27,7 +27,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "com.google.inject:guice:4.0"
     compile "org.avaje.ebeanorm:avaje-ebeanorm:7.13.1"
-    compile "com.kue:kue-core:1.0.0"
+    compile "com.kue:kue-core:1.0.2"
 }
 
 
@@ -41,7 +41,7 @@ bintray {
         licenses = ['MIT']
         vcsUrl = 'https://github.com/kue-framework/kue-ebean'
         version {
-            name = '1.0.0'
+            name = '1.0.1'
         }
     }
 }
@@ -52,7 +52,7 @@ publishing {
             from components.java
             groupId group
             artifactId 'kue-ebean'
-            version '1.0.0'
+            version '1.0.1'
             artifact sourceJar {
                 classifier "sources"
             }
